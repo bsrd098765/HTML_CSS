@@ -1,0 +1,271 @@
+/* Astrik(*) means this property will apply to all elements*/
+/*
+*{
+     margin: 0;
+     padding: 0;
+}
+*/
+body{
+     background-color: lightblue;
+     color :grey;
+
+     font-family: Arial, Helvetica, sans-serif;
+     font-size: large;
+     font-weight: normal;
+     /*same as above*/
+     font: normal large Arial, Helvetica, sans-serif;
+    
+     /*Line height increases height b/w lines*/
+     line-height: 1.6em;
+     /*Will make margin all four sides zero*/
+     margin: 0;
+     
+}
+
+/*a will apply the styling to all links in the page*/
+a{
+     /*Will remove all decorations if any*/
+     text-decoration: none;
+     color: #000;
+}
+
+/*We can change state of links (visited, hovering, active)*/
+a:hover{
+     color: red;
+}
+
+a:active{
+     color: green;
+}
+
+/*a:visited{
+     color : black;
+ } */
+
+.container{
+     /*Putting width in px, wont be responsive, so it is better to put it in percentage
+     width: 960px;*/
+     width: 80% ;
+     margin: auto;
+}
+
+.button{
+     background-color: #000;
+     color: #fff;
+     padding: 10px 15px;
+     border: none;
+
+}
+/*We can add hover function o button*/
+.button:hover{
+     background: red;
+     color: white;
+}
+
+.clr{
+     clear: both;
+
+}
+
+/* dot(.) is used to target class*/
+.box-1{
+     background-color: #333;
+     color: #fff;
+
+     border-right: 5px red solid;
+     border-left: 5px red solid;
+     border-top: 5px red solid;
+     border-bottom: 5px red solid;
+     /*Same As Above*/
+     border: 5px red solid;
+     border-width: 3px;
+     border-bottom-width: 10px;
+     border-top-style: dotted;
+     
+     /*As we are putting this at bottom above every property will be over ridden*/
+     border: 5px red solid;
+     padding-top: 20px;
+     padding-bottom: 20px;
+     padding-left: 20px;
+     padding-right: 20px;
+
+     /*Same as Above*/
+     padding: 20px;
+
+     margin-top: 20px;
+
+     /*Adds Margin on all sides*/
+     margin: 20px;
+
+     /*Adds Margin in top & bottom*/
+     margin: 20px 0;
+}
+
+
+/*Below targets box-1 class  & tag h1 only of box-1 class */
+.box-1 h1{
+     font-family: Tahoma;
+     font-weight: 800;
+     font-style: italic;
+     text-decoration: underline;
+     text-transform: uppercase;
+     word-spacing: 1em;
+     letter-spacing: 0.2em;
+
+}
+
+.box-2{
+     border: 3px dotted red;
+     color: black;
+     margin: 20px 0;
+     padding: 20px;
+
+}
+
+.box-2 a{
+     color: #fff;
+
+}
+
+/*categories is the div surronding the list,not the list it self*/
+.categories{
+     border: 3px dotted red;
+     padding: 10px;
+     border-radius: 15;
+
+}
+
+.categories h2{
+     text-align: center;
+}
+
+.categories ul{
+     /*ul lists has some default padding*/
+     padding: 0;
+     /*We Can Change styling of lists*/
+     list-style: square;
+     list-style: none;
+
+}
+
+.categories li{
+     padding-bottom: 8px;
+     border-bottom: dotted 1px #333;
+}
+
+/*padding pads 20px along all directi*/
+.my-form{
+     padding: 20px;
+     
+}
+
+.my-form .form-group{
+     padding-bottom:15px;
+}
+
+/*Labels are inline elements by default(same line)
+ we can make them */
+.my-form label{
+     display: block;
+}
+
+/*We can target subtype of class using type*/
+
+.my-form input[type ="text"], .my-form textarea{
+     padding: 8px;
+     width: 100%;
+}
+
+/*Now here submit is not universal, to apply all button add it on top*/
+.my-form input[type="submit"]{
+     background-color: #000;
+     color: #fff;
+     padding: 10px 15px;
+     border: none;
+
+}
+
+.block{
+     /*Float Property is used to make vertical blocks to horzintal*/
+     float: left;
+     width: 33.3%;
+     border: 1px solid red;
+     padding: 10px;
+     /*After Adding Above Properties all may not on same line as expected ,
+      so will add property called box sizing  */
+     box-sizing: border-box; 
+}
+
+#main-block{
+     padding-top: 10px;
+     float: left;
+     width: 70%;
+}
+
+#sidebar{
+     margin-top: 20px;
+     padding-top: 10px;
+     float: right;
+     width: 30%;
+     background-color: grey;
+     color: white;
+     box-sizing: border-box;
+}
+
+.p-box{
+     width: auto;
+     height: 500px ;
+     border: 1px solid red;
+     margin-top: 20px;
+     /*position is relative, means position of element wrt to this element*/
+     position: relative;
+     /*(../) will bring u out of current folder*/
+     background-image: url('../css-image.png');
+     background-repeat: no-repeat;
+     background-position: 100px 200px;
+     background-position: center top;
+
+}
+
+/*We have a concept position means, by which we can define position
+ of element absolutely(complete HTML) or relatively (wrt to an element),
+  Fixed means will be fixed irrespective of  */
+
+.p-box h1{
+     /*position absolute means , position of element wrt to complete HTML Doc*/
+     position: absolute;
+     top: 100px;
+     left: 200px;
+}
+
+
+.p-box h2{
+     position: absolute;
+     bottom: 40px;
+     right: 200px;
+}
+
+
+.fix-me{
+     background-color: Black;
+     position: fixed;
+     top: 400px;
+}
+
+/*Pseudo elements are used to target certain elements of similar type*/
+.my-list li:first-child{
+     background: red;
+}
+
+.my-list li:last-child{
+     background: blue;
+}
+
+.my-list li:nth-child(5){
+     background: yellow;
+}
+
+.my-list li:nth-child(even){
+     background: white;
+}
+
